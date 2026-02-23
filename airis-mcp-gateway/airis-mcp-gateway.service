@@ -1,0 +1,12 @@
+[Unit]
+Description=Airis MCP Gateway
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+User=tovic
+ExecStart=/home/tovic/.local/bin/airis-start.sh
+
+[Install]
+WantedBy=multi-user.target
